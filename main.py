@@ -159,7 +159,6 @@ def getBeijinTime():
                 msg_mi += main(user_mi,passwd_mi,min_1, max_1)
                 #print(msg_mi)
             if a:
-               print('小米运动步数修改：' + msg_mi)
                push('【小米运动步数修改】', msg_mi)
                push_wx(msg_mi)
                run(msg_mi)
@@ -265,7 +264,7 @@ def main(_user,_passwd,min_1, max_1):
     response = requests.post(url, data=data, headers=head).json()
     # print(response)
     result = f"[{now}]\n账号：{user[:3]}****{user[7:]}\n修改步数（{step}）[" + response['message'] + "]\n"
-    #print(result)
+    print(result)
     return result
 
 
